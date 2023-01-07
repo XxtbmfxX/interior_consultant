@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+
+    <link rel="icon" href="devchallenges.png" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Interiro consultant</title>
+
+    <style></style>
+  </head>
+  <body>
+    <header class="Header">
+      <div class="Header_logo">
+        <span>This interior</span>
+      </div>
+
+      <nav class="Header_nav">
+        <button onclick="closeNav()" class="Header_nav-close">
+          <img src="./cross.png" alt="clse" srcset="" />
+        </button>
+
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Collection</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="Header_burger">
+        <span class="Header_burger-list" onclick="openNav()">
+          <img src="./list.svg" alt="menu" />
+        </span>
+      </div>
+    </header>
+
+    <main class="Main">
+      <article class="Main_top">
+        <section class="Main_top-text element">
+          <h1>Modern Interior</h1>
+          <p>
+            A full-Service residential & commercial interior design and staging
+            company offering professional organizing & eco-services.
+          </p>
+        </section>
+
+        <section class="Main_top-button">
+          <span>Read More -></span>
+        </section>
+      </article>
+      <article class="Main_bottom">
+        <img
+          class="Main_bottom-img"
+          loading="lazy"
+          src="./photo1.png"
+          alt=""
+          srcset="" />
+
+        <div class="Main_bottom-card">
+          <div class="Main_bottom-card-top">
+            <img loading="lazy" src="./photo2.png" alt="" srcset="" />
+            <div class="card-top-text">
+              <small>Aliza Webber</small>
+              <small>Interior designer</small>
+            </div>
+          </div>
+          <div class="Main_bottom-card-title">
+            <h2>Designed in 2020 by Aliza Webber</h2>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="Footer">
+      <small>
+        created by
+        <a href="https://devchallenges.io/portfolio/XxtbmfxX">Toro</a> -
+        <a href="https://devchallenges.io">dev.Challenges.io</a>
+      </small>
+    </footer>
+  </body>
+
+  <script>
+    const nav = document.querySelector(".Header_nav");
+    const list = document.querySelector(".Header_burger-list");
+    const button = document.querySelector(".Header_nav-close");
+    const logo = document.querySelector(".Header_logo");
+
+    const closeNav = () => {
+      nav.style.display = "none";
+      list.style.display = "flex";
+      logo.style.display = "block";
+      document.body.style.overflow = "visible";
+    };
+    const openNav = () => {
+      nav.style.display = "flex";
+      list.style.display = "none";
+      logo.style.display = "none";
+      document.body.style.overflow = "hidden";
+    };
+  </script>
+</html>
